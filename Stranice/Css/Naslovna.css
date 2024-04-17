@@ -1,0 +1,990 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--cambridge-blue);
+    min-height: 200vh;
+}
+
+:root {
+
+    --pozadina: #bdd2d9;
+    --bijela: #fff;
+    --slider: #635e5e;
+    --rose-quartz: #a690a4;
+    --eggplant: #5e4b56;
+    --tangelo: #fb5012;
+    --mint-cream: #f0f7ee;
+    --cambridge-blue: #87bba2;
+
+}
+
+/*  Custom scroll bar  */
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #cecdcd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--eggplant);
+}
+
+/*  Header  */
+
+header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+header.sticky {
+
+    padding: 5px 100px;
+    background: var(--mint-cream);
+    visibility: visible;
+    opacity: 1;
+
+}
+
+header .logo {
+
+    position: relative;
+    font-weight: 700;
+    color: var(--mint-cream);
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+
+}
+
+header ul {
+
+    position: relative;
+    display: flex;
+    justify-content: flex;
+    align-items: center;
+
+}
+
+header ul li {
+
+    position: relative;
+    list-style: none;
+
+}
+
+header ul li a {
+
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.6s;
+    color: var(--mint-cream);
+
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+
+    color: var(--slider);
+
+}
+
+/*  Animaicija glavnih slika  */
+
+#slider {
+
+    background-image: linear-gradient(rgba(183, 182, 182, 0.4) 0%, rgba(99, 94, 94, 0.6) 20%, rgba(99, 94, 94, 0.7) 50%, rgba(99, 94, 94, 0.4) 80%, var(--cambridge-blue, 0.8) 100%), url(../../Slike/fabric.jpg);
+
+    overflow: hidden;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+}
+
+
+#slider figure {
+
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 50s slider infinite, 50s op infinite;
+    animation-timing-function: ease-out;
+}
+
+#slider figure img {
+
+    float: left;
+    width: 20%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    max-height: 400px;
+    object-fit: contain;
+
+}
+
+
+@keyframes slider {
+
+    0% {
+        left: 0;
+    }
+
+    18% {
+        left: 0;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    40% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    65% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    93% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+
+}
+
+@keyframes op {
+
+    0%{
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    18% {
+        opacity: 1;
+    }
+
+    18.75% {
+        opacity: 0;
+    }
+
+    22.5% {
+        opacity: 0;
+    }
+
+    23% {
+        opacity: 0.25;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    40.75% {
+        opacity: 0;
+    }
+
+    47.5% {
+        opacity: 0;
+    }
+
+    48% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    65.75% {
+        opacity: 0;
+    }
+
+    72.5% {
+        opacity: 0;
+    }
+
+    73% {
+        opacity: 0.25;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    93% {
+        opacity: 1;
+    }
+
+    93.75% {
+        opacity: 0;
+    }
+
+    97.5% {
+        opacity: 0;
+    }
+
+    98% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*  Glavni sadržaj  */
+
+#h2 {
+
+    margin-top: 100px;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 3px;
+
+}
+
+.main_txt {
+    justify-content: center;
+    width: 100%;
+    margin-top: 32px; 
+    margin-bottom: 120px;
+    padding: 0px 35px;
+    vertical-align: middle;
+    color: black;
+}
+
+#main {
+
+    width: 75%;
+    margin-left: 12.5%;
+
+}
+
+.naslov {
+
+    padding: 25px 0px;
+
+}
+
+#O_nama {
+
+    width: 80%;
+    margin-top: 16px;
+    margin-left: 10%;
+    padding-bottom: 35px;
+
+}
+
+#proizvodi {
+
+    text-align: center;
+    margin: 0;
+    padding: 20px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--mint-cream);
+    font-size: xx-large;
+    font-weight: bold;
+
+}
+
+.container {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    background: #1f3d476f;
+
+}
+
+.card {
+    width: 25%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border: solid 2px var(--eggplant);
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.card-body{
+    width: 101%;
+    height: 600px;
+    bottom: -101%;
+    right: 0;
+    padding: 30px;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+}
+
+.card:hover .card-body{
+    bottom: 0;
+}
+
+.card-title{
+    text-transform: none;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.card-info{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
+}
+
+.card-btn{
+    background: var(--rose-quartz);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: solid 2px var(--mint-cream);
+    margin: 0 auto;
+    width: 200px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+.card-btn:hover{
+    outline: solid 2px var(--eggplant);
+    background-color: var(--rose-quartz);
+}
+
+.card-btn a{
+    text-decoration: none;
+    color: var(--mint-cream);
+}
+
+/*  FAQ  */
+
+section {
+    min-height: 50vh;
+    width: 80%;
+    margin: 96px auto 96px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.title {
+    font-size: 2rem;
+    margin: 2rem 0rem;
+    letter-spacing: 3px;
+}
+
+/*  Container za pitanja  */
+.faq {
+    width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--slider);
+    cursor: pointer;
+}
+
+/*  Display u istom redu  */
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question h3 {
+    font-size: 1.5rem;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+.answer p {
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+    animation: fade 0.5s ease-in-out;
+}
+
+.faq.active i {
+    transform: rotate(90deg);
+}
+
+i {
+    transition: transform 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-25%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}
+
+/*  Mail form  */
+
+.mail{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 10px;
+    margin: 32px auto;
+    background-color: var(--rose-quartz);
+    border: dashed 3px var(--eggplant);
+    border-radius: 10px;
+}
+
+.mail h2{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.mail p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.mail label, .mail input, .mail textarea{
+    margin: 10px 17%;
+    max-width: 66%;
+    
+}
+
+.mail input, textarea{
+
+    border-radius: 10px;
+    border: solid 2px var(--eggplant);
+    background-color: var(--mint-cream);
+    padding: 5px;
+    transition: 0.5s ease-out;
+
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid var(--tangelo);
+    transition: 0.2s ease-in-out;
+}
+
+textarea:focus{
+    outline: none;
+    border: 2px solid var(--tangelo);
+    transition: 0.2s ease-in-out;
+}
+
+.mail a{
+    margin: 32px auto;
+    text-decoration: none;
+    color: var(--eggplant);
+    background-color: var(--mint-cream);
+    border: solid 2px var(--eggplant);
+    border-radius: 15px;
+    padding: 0.75rem 25%;
+    transition: 0.2s ease-out;
+}
+
+.mail a:hover{
+    color: var(--tangelo);
+    background-color: var(--eggplant);
+    border: solid 2px var(--tangelo);
+    transition: 0.2s ease-in-out;
+}
+
+.mail input{
+    height: 32px;
+}
+
+.mail textarea{
+    height: 100px;
+}
+
+
+
+/*  Footer  */
+
+.footer {
+
+    position: relative;
+    display: flexbox;
+    width: 100%;
+    min-height: 30vh;
+    padding-bottom: 16px;
+    padding-top: 32px;
+    background-color: var(--slider);
+    align-items: center;
+    margin-top: 64px;
+
+}
+
+.footer ul {
+
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-evenly;
+
+}
+
+.footer ul li {
+
+    margin-top: 10px;
+    font-size: small;
+    line-height: 1.6em;
+
+}
+
+#list {
+
+    display: block;
+    text-align: center;
+    color: var(--mint-cream);
+
+}
+
+#list li a {
+
+    text-decoration: none;
+    color: var(--mint-cream);
+    transition: 0.1s ease-out;
+}
+
+#list li a:hover{
+    color: var(--tangelo);
+    transition: 0.1s ease-in;
+}
+
+
+#f_h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/*  Media query-i  */
+
+@media screen and (max-width: 1400px){
+
+   
+}
+
+@media screen and (max-width: 1200px){
+
+
+}
+
+@media screen and (max-width: 992px){
+
+    #O_nama{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .card{
+        max-height: 450px;
+    }
+
+    .card img{
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    .card-body{
+        max-height: 450px;
+        padding: 30px;
+    }
+
+    .card-title{
+        margin-top: 50px;
+        font-size: 36px;
+    }
+
+    .card-info{
+        font-size: 14px;
+        line-height: 25px;
+        margin: 40px 0 10px 0;
+        font-weight: 300;
+    }
+
+    .card-btn{
+        margin: 0 auto;
+        width: 150px;
+        text-transform: capitalize;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+
+    .mail{
+        max-width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+
+    #slider {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    #slider figure img {
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    .main_txt {
+        margin-bottom: 64px;
+    }
+
+    #h2 {
+        margin-top: 75px;
+        font-size: 1.75rem;
+        letter-spacing: 2px;
+    }
+
+    #main {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #proizvodi {
+        font-size: x-large;
+    }
+    
+    body .card{
+        height: 350px;
+    }
+
+    .card .card-body{
+        height: 350px;
+        padding: 15px;
+    }
+
+    .card-body .card-title{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .card-body .card-info{
+        font-size: 12px;
+        line-height: 15px;
+        margin: 15px 0 10px 0;
+        font-weight: 300;
+    }
+
+    .card-btn{
+        margin: 0 auto;
+        width: 150px;
+        text-transform: capitalize;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+
+    section{
+        margin: 64px auto 96px auto;
+    }
+
+    .faq {
+        max-width: 500px;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .question h3 {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+
+    header.sticky{
+        padding: 10px 50px;
+        justify-content: space-evenly;
+        min-height: 60px;
+    }
+
+    header .logo{
+        font-size: 1rem;
+        margin-right: 20px;
+    }
+
+    header ul {
+        justify-content: space-evenly;
+    }
+
+    header ul li a{
+        font-size: 14px;
+    }
+
+    #O_nama p{
+        line-height: 1.4rem;
+    }
+
+    #proizvodi {
+        font-size: 30px;
+    }
+
+    .container {
+     flex-direction: column;
+    }
+
+    .container .card{
+        width: 100%;
+    }
+
+    .card img{
+        height: 400px;
+        object-fit: contain;
+    }
+
+    .card-body .card-title{
+        margin-left: 40%;
+        font-size: 25px;
+    }
+
+    .card-body .card-info{
+        font-size: 15px;
+        line-height: 20px;
+        margin: 40px 10% 40px 10%;
+        font-weight: 300;
+    }
+
+    .faq {
+        max-width: 350px;
+    }
+
+    .answer p{
+        font-size: 14px;
+        line-height: 1.4rem;
+    }
+
+    .mail{
+        max-width: 80%;
+    }
+
+    .mail h2{
+        font-size: 20px;
+    }
+
+    .mail p{
+        font-size: 16px;
+    }
+
+    .mail label {
+        font-size: 14px;
+    }
+
+    .footer ul li{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    #f_h2 {
+        font-size: 1.1em;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+  
+    
+    header.sticky{
+        padding: 10px none;
+        justify-content: space-evenly;
+        min-height: 60px;
+    }
+
+    header .logo{
+        font-size: 14px;
+    }
+
+    header ul li a{
+        font-size: 12px;
+    }
+
+    #O_nama p{
+        line-height: 1.4rem;
+        font-size: 14px;
+    }
+
+    #proizvodi {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    
+    
+    header.sticky{
+        padding: 10px 30px;
+        justify-content: space-between;
+        min-height: 60px;
+    }
+
+    header .logo{
+        font-size: 14px;
+    }
+
+    header ul li a{
+        font-size: 12px;
+    }
+
+    #O_nama p{
+        line-height: 1.4rem;
+        font-size: 14px;
+    }
+
+    #proizvodi {
+        font-size: 25px;
+    }
+
+    .mail label {
+        font-size: 14px;
+        margin: 10px 10%;
+    }
+
+    .mail input{
+        min-width: 275px;
+        margin: 10px auto;
+    }
+
+    .mail textarea{
+        min-width: 275px;
+        margin: 10px auto;
+    }
+
+}
+
+@media screen and (max-width: 415px){
+    
+    header.sticky{
+        padding: 10px 5px;
+        justify-content: space-between;
+        min-height: 60px;
+    }
+
+    header .logo{
+        font-size: 12px;
+    }
+
+    header ul li a{
+        font-size: 10px;
+    }
+
+    .faq{
+        max-width: 250px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .mail input{
+        min-width: 200px;
+    }
+
+    .mail textarea{
+        min-width: 200px;
+    }
+
+}
