@@ -6,19 +6,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/821d1ef848.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="Css/Proizvod1.css">
+    <link rel="stylesheet" href="Css/Proizvod3.css">
 
 
     <!--           Meta i ostalo             -->
     <meta charset="UTF-8">
-    <meta name="description" content="Beanllow jastuci">
-    <meta name="keywords" content="Beanllow, Clockworks, bean bag, vreća za sjedenje, jastuk, jastuci, proizvodi"> 
+    <meta name="description" content="Beanllow višenamjenska vreća">
+    <meta name="keywords" content="Beanllow, Clockworks, vreća za sjedenje, madrac, bean bag, vreća za sjedenje, jastuci, jastuk">
     <meta name="author" content="Leon Bačanović">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--  Title -->
-    <title>Jastuk</title>
-    <link rel="icon" href="../Slike/favicon-16x16.png">
-    <script defer src="JS/Proizvod1.js"></script>
+    <title>Višenamjenska vreća</title>
+    <link rel="icon" href="Slike/favicon-16x16.png">
+    <script defer src="JS/Proizvod3.js"></script>
 
 </head>
 
@@ -27,9 +27,9 @@
 
     <!--  Navigacija  -->
     <header>
-            <a href="Naslovna.html" class="logo">Beanllow</a>
+            <a href="index.html" class="logo">Beanllow</a>
             <ul>
-                <li><a href="Naslovna.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="Beanllow.html">O brendu</a></li>
                 <li><a href="Clockworks.html">O firmi</a></li>
                 <li><a href="Proizvodi.html">Proizvodi</a></li>
@@ -38,14 +38,25 @@
 
     <!-- Glavna slika -->
     <div class="container">
-        <div class="card">
-            <img src="../Slike/prva.png" alt="Jastuci">
-        </div>
+        <section class="container-sli">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-1" src="Slike/treca_proizvodi.png" alt="Višenamjenska vreća spremljena za sjedenje">
+                    <img id="slide-2" src="Slike/visenamjenska.png" alt="Višenamjenska vreća prostrta u obliku madraca za ležanje">
+                    <img id="slide-3" src="Slike/visenamjenska_2.png" alt="Višenamjenska vreća spremljena za sjedenje">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
+            </div>
+        </section>
         <div class="card-txt">
-            <h2>Jastuci</h2>
+            <h2>Višenamjenska vreća</h2>
             <p>
                 <br><br>
-                <b>Dimenzije:</b> 60x25x15cm, 30x20x15cm
+                <b>Dimenzije:</b> 100x150x25cm
                 <br><br>
                 <b>Punjenje:</b> reciklirani polistirol (EPS)
                 <br><br>
@@ -60,10 +71,11 @@
     <main>
         <div class="main_txt">
             <h2 id="h2">Dodatno</h2>
-                <p>
-                    Moguć odabir od dva standardna uzorka.
-                    <br><br>Moguća izrada i odabir uzorka po narudžbi.
-                </p>
+            <p>
+                Moguća izrada i odabir uzorka po narudžbi.
+                <br>
+                <br>Vreće dolaze s pripadajućim jastucima.
+            </p>
         </div>
     </main>
 
@@ -82,7 +94,7 @@
             <li>
                 <ul id="list">
                     <h2 id="f_h2">Navigacija</h2>
-                    <li><a href="Naslovna.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="Beanllow.html">O brendu</a></li>
                     <li><a href="Clockworks.html">O firmi</a></li>
                     <li><a href="Proizvodi.html">Proizvodi</a></li>
@@ -90,17 +102,17 @@
             </li>
             <li>
                 <ul id="list">
-                    <h2 id="f_h2">Proizvodi</h2>
-                    <li><a href="#">Jastuci</a></li>
-                    <li><a href="Vreća za sjedenje.html">Vreća za sjedenje</a></li>
-                    <li><a href="Višenamjenska vreća.html">Višenamjenska vreća</a></li>
+                    <h2 id="f_h2">Proizvodi</h2> 
+                    <li><a href="Jastuci.html">Jastuci</a></li>
+                    <li><a href="Vreca_za_sjedenje.html">Vreća za sjedenje</a></li>
+                    <li><a href="#">Višenamjenska vreća</a></li>
                     <li><a href="Madrac.html">Madrac</a></li>
                 </ul>
             </li>
         </ul>
     </footer>
 
-    <script src="./JS/Proizvod1.js"></script>
+    <script src="JS/Proizvod3.js"></script>
 </body>
 
 </html>
