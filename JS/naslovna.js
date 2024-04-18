@@ -38,13 +38,6 @@ const faqs = document.querySelectorAll(".faq");
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init());
   } else {
-    init();
-  }
-  
-  function init() {
-    const yearElement = document.querySelector(".year");
-    const todayYear = new Date().getFullYear();
-  
     listenToName();
   }
   
@@ -61,7 +54,7 @@ if (document.readyState === "loading") {
     } );
   
     document.querySelector("#sendContact").addEventListener('click', (event) => {
-      const link = `mailto:leon.bacanoivc@gmail.com?subject=Upit &body=${mailcontent}%0D%0A%0D%0ALp, ${name}`;
+      const link = `mailto:leon.bacanovic@gmail.com?subject=Upit &body=${mailcontent}%0D%0A%0D%0ALp, ${name}`;
       event.target.href = link;
     });
   }

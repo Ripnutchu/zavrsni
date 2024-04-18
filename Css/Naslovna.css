@@ -137,7 +137,7 @@ header.sticky ul li a {
     width: 500%;
     margin: 0;
     left: 0;
-    animation: 50s slider infinite, 50s op infinite;
+    animation: 35s slider infinite, 35s op infinite;
     animation-timing-function: ease-out;
 }
 
@@ -495,12 +495,6 @@ i {
     transform: translateX(0);
 }
 
-@media (prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
-}
-
 @keyframes fade {
     from {
         opacity: 0;
@@ -715,7 +709,6 @@ textarea:focus{
 
 @media screen and (max-width: 768px){
 
-
     #slider {
         padding-top: 32px;
         padding-bottom: 32px;
@@ -884,7 +877,6 @@ textarea:focus{
 }
 
 @media screen and (max-width: 500px){
-  
     
     header.sticky{
         padding: 10px none;
